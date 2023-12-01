@@ -149,11 +149,11 @@ a {
 }
 @keyframes picture2 {
   0% {
-    transform: translateY(100%);
+    transform: translateY(200vh);
     scale: 1.2;
   }
   20% {
-    transform: translateY(100%);
+    transform: translateY(200vh);
     scale: 1.2;
     box-shadow: -4px -32px 50px -5px rgba(0, 0, 0, 0.6);
   }
@@ -234,6 +234,7 @@ a {
     width: 100%;
     min-width: 600px;
     margin: 0 auto;
+    overflow-x: hidden;
   }
   .about_pic:nth-child(1) {
     rotate: 94deg;
