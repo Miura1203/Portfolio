@@ -1,0 +1,156 @@
+/* menu */
+.h_menu {
+  width: 120px;
+  height: 120px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #ff7860;
+  border-radius: 50%;
+  transform: scale(0.9);
+  transition: all 0.1s;
+  z-index: 9999;
+}
+
+.h_menu:hover {
+  transform: scale(1);
+}
+
+.h_a01,
+.h_a02,
+.h_a03 {
+  width: 65px;
+  height: 65px;
+  position: fixed;
+  background-color: #ff7860;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 19px;
+  color: #fff;
+  display: none;
+  z-index: 9999;
+}
+.h_menu_li a {
+  transition: all 0.1s;
+}
+.h_menu_li a:hover {
+  background-color: red;
+  scale: 1.1;
+}
+/* ------メニューひとつめ------ */
+.h_a01 {
+  top: 40px;
+  left: 140px;
+}
+.addPoyon {
+  display: block;
+  animation-name: poyon;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+@keyframes poyon {
+  5% {
+    scale: 0.8;
+  }
+  30% {
+    scale: 1.2;
+  }
+  50% {
+    scale: 0.9;
+  }
+  60% {
+    scale: 1;
+  }
+}
+.removePoyon {
+  animation-name: removePoyon;
+  animation-duration: 0.7s;
+  animation-fill-mode: both;
+}
+@keyframes removePoyon {
+  0% {
+    scale: 0.8;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 0;
+  }
+}
+/* ------メニューふたつめ------ */
+.h_a02 {
+  top: 115px;
+  left: 120px;
+}
+/* ------メニューみっつめ------ */
+.h_a03 {
+  top: 140px;
+  left: 40px;
+}
+/* ---------------------------------------- */
+/* minimap */
+.h_minimap {
+  width: 160px;
+  height: 160px;
+  background-color: #fff;
+  border: 3px solid #bad227;
+  border-radius: 50%;
+}
+
+.h_minimap_p {
+  text-align: center;
+  color: gray;
+}
+
+.h_minimap_p a {
+  color: gray;
+}
+
+.h_minimap_box {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 950px) {
+  .h_minimap_box {
+    display: none;
+  }
+  .mail_content {
+    top: 10px;
+    right: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .h_menu {
+    width: 80px;
+    height: 80px;
+  }
+  .h_a01,
+  .h_a02,
+  .h_a03 {
+    width: 60px;
+    height: 60px;
+    padding-top: 18px;
+  }
+  /* ------メニューひとつめ------ */
+  .h_a01 {
+    top: 10px;
+    left: 95px;
+  }
+  /* ------メニューふたつめ------ */
+  .h_a02 {
+    top: 80px;
+    left: 81px;
+  }
+  /* ------メニューみっつめ------ */
+  .h_a03 {
+    top: 95px;
+    left: 10px;
+  }
+}
