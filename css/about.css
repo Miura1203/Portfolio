@@ -282,7 +282,7 @@ li {
     top: 18%;
     width: 100%;
     min-width: 480px;
-    scale: 1.1;
+    scale: 1;
     /* margin: 0 auto; */
     /* translate: -19% 10%; */
   }
@@ -301,7 +301,7 @@ li {
   .about_pic:nth-child(2) {
     rotate: 88deg;
     /* scale: 0.9; */
-    scale: 1.1;
+    scale: 1;
   }
   @keyframes picture2 {
     0% {
@@ -316,7 +316,7 @@ li {
     50% {
       transform: translateX(0);
       /* scale: 0.9; */
-      scale: 1.1;
+      scale: 1;
       box-shadow: 7px 7px 10px -9px rgba(0, 0, 0, 0.6);
     }
     100% {
@@ -326,7 +326,7 @@ li {
   .about_pic:nth-child(3) {
     rotate: 90deg;
     /* scale: 0.9; */
-    scale: 1.1;
+    scale: 1;
   }
   @keyframes picture3 {
     0% {
@@ -345,7 +345,7 @@ li {
     90% {
       transform: translateX(0);
       /* scale: 0.9; */
-      scale: 1.1;
+      scale: 1;
       box-shadow: 7px 7px 10px -9px rgba(0, 0, 0, 0.6);
     }
     100% {
@@ -386,6 +386,15 @@ li {
   .my_from {
     margin: 0;
   }
+  .skill {
+    margin: 10px 0;
+  }
+  .skillIcon img {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media screen and (max-width: 600px) {
 }
 @media screen and (max-width: 480px) {
   .about_pic {
