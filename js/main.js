@@ -133,6 +133,15 @@ $(function () {
     $(".modalBase,.modalBack,.closeBtn").addClass("modalAnime_Close");
     $('html, body').removeAttr('style');
   });
+  $(".closeBtn,.modalBack").on("touchend", function () {
+    $(".modalBase,.modalBack,.closeBtn").addClass("modalAnime_Close");
+    setTimeout(function(){
+      $('.modalContent').removeClass('modalContent_View');
+      $(".modalBase,.modalBack,.closeBtn").removeClass("modalAnime_Close");
+    })
+    $('html, body').removeAttr('style');
+  });
+  
 });
 
 // WORKSここまで
