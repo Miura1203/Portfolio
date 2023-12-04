@@ -153,6 +153,10 @@ section {
 }
 .siteViewing {
   background-color: antiquewhite;
+  overflow-y: scroll;
+}
+.siteViewing img {
+  height: fit-content;
 }
 .siteContent {
   left: 50%;

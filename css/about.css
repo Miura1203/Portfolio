@@ -26,7 +26,8 @@ h2,
 h3,
 h4,
 p,
-a {
+a,
+li {
   color: #464646;
 }
 /* タイトル */
@@ -149,11 +150,11 @@ a {
 }
 @keyframes picture2 {
   0% {
-    transform: translateY(200vh);
+    transform: translateY(100%);
     scale: 1.2;
   }
   20% {
-    transform: translateY(200vh);
+    transform: translateY(100%);
     scale: 1.2;
     box-shadow: -4px -32px 50px -5px rgba(0, 0, 0, 0.6);
   }
@@ -195,8 +196,7 @@ a {
 /* 用紙の内容 */
 
 .myplofile,
-.my_picbox img,
-.my_plobox {
+.my_picbox img {
   position: absolute;
 }
 
@@ -206,7 +206,17 @@ a {
   /* z-index: 0; */
   top: 0%;
   padding: 32px;
+  display: flex;
 }
+.my_plobox01,
+.my_plobox02 {
+  width: 100%;
+  height: 100%;
+  margin: 0 20px;
+}
+/* .my_plobox02 {
+  margin-left: 20px;
+} */
 .my_picbox img {
   left: 30%;
   width: 20%;
@@ -215,7 +225,7 @@ a {
 }
 .my_name {
   /* color: #3d3d3d; */
-  font-size: 24px;
+  font-size: 20px;
   margin: 16px 0;
 }
 
@@ -226,19 +236,59 @@ a {
 .my_from {
   margin: 12px 0;
 }
+.my_favo {
+  width: 100%;
+}
+.my_favo div {
+  padding: 10px 0;
+  background-color: #fff;
+  margin: 10px 0;
+  width: 100%;
+}
+.my_favo h3 {
+  font-weight: bold;
+}
+.my_schoolCareer,
+.my_career {
+  background-color: #fff;
+  margin-bottom: 1rem;
+}
+.my_plobox02 span {
+  margin-left: 1rem;
+}
+/* ------mySkill------ */
+.skillIcon img {
+  width: 80px;
+  height: 80px;
+}
+.skill {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.skillText {
+  margin-left: 1rem;
+}
+.skill_h3 {
+  text-align: center;
+}
 
 /* レスポンシブ */
 @media screen and (max-width: 900px) {
-  .about_pic {
-    top: 10%;
-    width: 100%;
-    min-width: 600px;
-    margin: 0 auto;
+  /* .about_box {
     overflow-x: hidden;
+  } */
+  .about_pic {
+    top: 18%;
+    width: 100%;
+    min-width: 480px;
+    scale: 1.1;
+    /* margin: 0 auto; */
+    /* translate: -19% 10%; */
   }
   .about_pic:nth-child(1) {
     rotate: 94deg;
-    scale: 0.9;
+    /* scale: 0.9; */
   }
   @keyframes picture1 {
     0% {
@@ -250,7 +300,8 @@ a {
   }
   .about_pic:nth-child(2) {
     rotate: 88deg;
-    scale: 0.9;
+    /* scale: 0.9; */
+    scale: 1.1;
   }
   @keyframes picture2 {
     0% {
@@ -264,7 +315,8 @@ a {
     }
     50% {
       transform: translateX(0);
-      scale: 0.9;
+      /* scale: 0.9; */
+      scale: 1.1;
       box-shadow: 7px 7px 10px -9px rgba(0, 0, 0, 0.6);
     }
     100% {
@@ -273,7 +325,8 @@ a {
   }
   .about_pic:nth-child(3) {
     rotate: 90deg;
-    scale: 0.9;
+    /* scale: 0.9; */
+    scale: 1.1;
   }
   @keyframes picture3 {
     0% {
@@ -291,11 +344,51 @@ a {
     }
     90% {
       transform: translateX(0);
-      scale: 0.9;
+      /* scale: 0.9; */
+      scale: 1.1;
       box-shadow: 7px 7px 10px -9px rgba(0, 0, 0, 0.6);
     }
     100% {
       box-shadow: 7px 7px 10px -9px rgba(0, 0, 0, 0.6);
     }
+  }
+  h3 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 15px;
+  }
+  .myplofile {
+    display: block;
+    rotate: -90deg;
+    left: 0;
+    width: 70%;
+    padding: 16px;
+  }
+  .my_picbox img {
+    left: unset;
+    right: 32px;
+    width: 30%;
+  }
+  .my_plobox01,
+  .my_plobox02 {
+    margin: 0;
+    height: fit-content;
+  }
+  .my_favo div {
+    padding: 0;
+  }
+  .my_name {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .my_birth,
+  .my_from {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about_pic {
+    min-width: 375px;
   }
 }

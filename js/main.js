@@ -11,6 +11,7 @@ $(function () {
           target.addClass("addPoyon");
         }, count * 100);
       });
+      $('.menuImg').css({'background-position':'center','transition':'0.5s'})
       isViewing = true;
     } else {
       $(".h_menu_li").each(function (count) {
@@ -19,10 +20,36 @@ $(function () {
           target.addClass("removePoyon");
         }, count * 100);
       });
+      $('.menuImg').css({'background-position':''})
       isViewing = false;
     }
   });
 });
+
+// menu画像設定
+$(".menuImg").hover(
+  function(){
+    $('.menuImg,.h_menu').css('transform','scale(1)')
+  },
+  function(){
+    $('.menuImg,.h_menu').css('transform','scale(0.9)')
+    $('.menuImg').css('transition','all 0.1s')
+  }
+)
+
+$('.h_menu_li').hover(
+  function(){
+    let liIndex = $(this).index()
+    if (liIndex === 0){
+      $('.menuImg').css('background-image','url(../img/menu/無題482_20231204090416.png)')
+    }else if(liIndex === 1){
+      $('.menuImg').css('background-image','url(../img/menu/無題482_20231204090421.png)')
+    }
+  },
+  function(){
+    $('.menuImg').css('background-image','url(../img/menu/無題482_20231204090411.png)')
+  }
+)
 // menubtnここまで
 
 // ABOUT
