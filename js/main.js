@@ -138,7 +138,7 @@ $(function () {
     setTimeout(function(){
       $('.modalContent').removeClass('modalContent_View');
       $(".modalBase,.modalBack,.closeBtn").removeClass("modalAnime_Close");
-    })
+    },500)
     $('html, body').removeAttr('style');
   });
   
