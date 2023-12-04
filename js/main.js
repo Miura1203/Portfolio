@@ -5,7 +5,8 @@ $(function () {
     if (!isViewing) {
       // メニューが非表示の時(状態:false;条件:true;)
       $(".h_menu_li").each(function (count) {
-        let target = $(this.children); // jqueryセレクタに変更し、addClassが使用できるように変数へ代入
+         // jqueryセレクタに変更し、addClassが使用できるように変数へ代入
+        let target = $(this.children);
         setTimeout(function () {
           target.removeClass("removePoyon");
           target.addClass("addPoyon");
@@ -37,19 +38,6 @@ $(".menuImg").hover(
   }
 )
 
-$('.h_menu_li').hover(
-  function(){
-    let liIndex = $(this).index()
-    if (liIndex === 0){
-      $('.menuImg').css('background-image','url(../img/menu/無題482_20231204090416.png)')
-    }else if(liIndex === 1){
-      $('.menuImg').css('background-image','url(../img/menu/無題482_20231204090421.png)')
-    }
-  },
-  function(){
-    $('.menuImg').css('background-image','url(../img/menu/無題482_20231204090411.png)')
-  }
-)
 // menubtnここまで
 
 // ABOUT
@@ -68,6 +56,21 @@ $(function () {
   });
 });
 
+$('.h_menu_li').hover(
+  function(){
+    let liIndex = $(this).index()
+    if (liIndex === 0){
+      $('.menuImg').css('background-image','url(../img/menu/無題482_20231204090416.png)')
+    }else if(liIndex === 1){
+      $('.menuImg').css('background-image','url(../img/menu/無題482_20231204090421.png)')
+    }else{
+      $('.menuImg').css('background-image','url(../img/menu/無題482_20231204143352.png)')
+    }
+  },
+  function(){
+    $('.menuImg').css('background-image','url(../img/menu/無題482_20231204090411.png)')
+  }
+)
 // ABOUTここまで
 
 // WORKS
@@ -115,7 +118,6 @@ $(function () {
         $(".modalBase,.modalBack").addClass("modalAnime_Open");
         $('.webModal').children().eq(contentIndex).addClass('modalContent_View');
       }else if(parent === "illust_container"){
-        // console.log(n);
         $(".modalBase,.modalBack").addClass("modalAnime_Open");
         $('.illustModal').children().eq(contentIndex).addClass('modalContent_View');
       
@@ -136,7 +138,18 @@ $(function () {
 // WORKSここまで
 
 // レスポンシブ
+// TOP
 $(".newTopics_ber").on("touchend", function () {
-  // console.log("touch")
   $(".newTopics").toggleClass("touch");
 });
+// ABOUT
+$('.h_menu_li').on('touchstart',function(){
+    let liIndex = $(this).index()
+    if (liIndex === 0){
+      $('.menuImg').css('background-image','url(../img/menu/無題482_20231204090416.png)')
+    }else if(liIndex === 1){
+      $('.menuImg').css('background-image','url(../img/menu/無題482_20231204090421.png)')
+    }else{
+      $('.menuImg').css('background-image','url(../img/menu/無題482_20231204143352.png)')
+    }
+})

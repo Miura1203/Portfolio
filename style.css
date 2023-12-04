@@ -129,6 +129,7 @@ a {
   .newTopics {
     transition: all 0.3s;
     transform: translateX(-76%);
+    top: 30%;
   }
   .touch {
     transform: translateX(0);

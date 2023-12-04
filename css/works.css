@@ -73,6 +73,9 @@ section {
   justify-content: center;
   flex-wrap: wrap;
 }
+#web_container img {
+  object-position: top;
+}
 /* illust content */
 .contentBox {
   background-color: #fff;
@@ -310,6 +313,7 @@ section {
   }
   .siteViewing {
     height: 300px;
+    overflow-y: hidden;
   }
   .siteContent {
     top: 300px;

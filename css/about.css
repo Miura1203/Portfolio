@@ -237,6 +237,7 @@ li {
   margin: 12px 0;
 }
 .my_favo {
+  margin-top: 40px;
   width: 100%;
 }
 .my_favo div {
@@ -386,6 +387,9 @@ li {
   .my_from {
     margin: 0;
   }
+  .my_favo {
+    margin-top: 0;
+  }
   .skill {
     margin: 10px 0;
   }
@@ -395,6 +399,14 @@ li {
   }
 }
 @media screen and (max-width: 600px) {
+  .my_name {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+  .about_pic {
+    translate: -10% 0%;
+    width: 145%;
+  }
 }
 @media screen and (max-width: 480px) {
   .about_pic {
