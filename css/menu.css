@@ -151,6 +151,15 @@
     border-radius: 0 0 50px 50px;
     background-position: 50% 70px;
   }
+  .rightImg {
+    background-image: url(../img/menu/無題482_20231204090416.png);
+  }
+  .rightBottomImg {
+    background-image: url(../img/menu/無題482_20231204090421.png);
+  }
+  .bottomImg {
+    background-image: url(../img/menu/無題482_20231204143352.png);
+  }
   .h_a01,
   .h_a02,
   .h_a03 {

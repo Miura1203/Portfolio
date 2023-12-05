@@ -143,13 +143,13 @@ $(".newTopics_ber").on("touchend", function () {
   $(".newTopics").toggleClass("touch");
 });
 // ABOUT
-$('.h_menu_li').on('touchstart',function(){
-    let liIndex = $(this).index()
-    if (liIndex === 0){
-      $('.menuImg').css('background-image','url(../img/menu/無題482_20231204090416.png)')
-    }else if(liIndex === 1){
-      $('.menuImg').css('background-image','url(../img/menu/無題482_20231204090421.png)')
-    }else{
-      $('.menuImg').css('background-image','url(../img/menu/無題482_20231204143352.png)')
-    }
-})
+// $('.h_menu_li').on('touchstart',function(){
+//     let liIndex = $(this).index()
+//     if (liIndex === 0){
+//       $('.menuImg').css('background-image','url(../img/menu/無題482_20231204090416.png)')
+//     }else if(liIndex === 1){
+//       $('.menuImg').css('background-image','url(../img/menu/無題482_20231204090421.png)')
+//     }else{
+//       $('.menuImg').css('background-image','url(../img/menu/無題482_20231204143352.png)')
+//     }
+// })
