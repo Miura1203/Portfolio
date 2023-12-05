@@ -1,75 +1,82 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ポートフォリオサイト</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./css/menu.css">
-</head>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/menu.css" />
+  </head>
 
-<body>
+  <body>
     <header>
+      <!-- menu -->
+      <div class="h_menu"></div>
+      <div id="js_target" class="menuImg"></div>
 
-        <!-- menu -->
-        <div class="h_menu"></div>
-        <div id="js_target" class="menuImg"></div>
+      <nav>
+        <ul id="menu_active" class="h_menulist">
+          <li class="h_menu_li"><a href="#TOP" class="h_a01">TOP</a></li>
+          <li class="h_menu_li">
+            <a href="./html/about.html" class="h_a02">ABOUT</a>
+          </li>
+          <li class="h_menu_li">
+            <a href="./html/works.html" class="h_a03">WORKS</a>
+          </li>
+        </ul>
+      </nav>
 
-        <nav>
-            <ul id="menu_active" class="h_menulist">
-                <li class="h_menu_li"><a href="#TOP" class="h_a01">TOP</a></li>
-                <li class="h_menu_li"><a href="./html/about.html" class="h_a02">ABOUT</a></li>
-                <li class="h_menu_li"><a href="./html/works.html" class="h_a03">WORKS</a></li>
-            </ul>
-        </nav>
+      <!-- minimap -->
 
-        <!-- minimap -->
-        
-        <div class="h_minimap_box">
-            <div class="h_minimap"></div>
-            <div class="h_minimap_p">
-                <p><a href="#TOP">PORTFOLIO</a>>TOP</p>
-            </div>
+      <div class="h_minimap_box">
+        <div class="h_minimap"></div>
+        <div class="h_minimap_p">
+          <p><a href="#TOP">PORTFOLIO</a>>TOP</p>
         </div>
+      </div>
 
-        <!-- mail,portfolio -->
-        <div class="mail_content">
-            <h2>PORTFOLIO</h2>
-            <a href="#">✉</a>
-        </div>
+      <!-- GIF -->
+      <div class="mov">
+        <img src="./img/IMB_VYoSgy.gif" alt="" />
+      </div>
+      <!-- mail,portfolio -->
+      <div class="mail_content">
+        <h2>PORTFOLIO</h2>
+        <a href="#">✉</a>
+      </div>
     </header>
     <main>
-        <div class="link_btn">
-            <div class="link_btn_box">
-                <a href="./html/about.html">ABOUT</a>
-                <a href="/index.html">TOP</a>
-                <a href="./html/works.html">WORKS</a>
-            </div>
+      <div class="link_btn">
+        <div class="link_btn_box">
+          <a href="./html/about.html">ABOUT</a>
+          <a href="/index.html">TOP</a>
+          <a href="./html/works.html">WORKS</a>
         </div>
+      </div>
 
-        <!-- {/* 新着情報 */} -->
+      <!-- {/* 新着情報 */} -->
 
-        <div class="newTopics">
-            <div class="newTopics_box">
-                <div class="Topics_scroll">
-                    <ul>
-                        <li><a href="#">新着情報があります！</a></li>
-                        <li><a href="#">新着情報があります！</a></li>
-                        <li><a href="#">新着情報があります！</a></li>
-                        <li><a href="#">新着情報があります！</a></li>
-                        <!-- <li><a href="#">新着情報があります！</a></li> -->
-                    </ul>
-                </div>
-            </div>
-            <div class="newTopics_ber"><p>新着情報</p></div>
+      <div class="newTopics">
+        <div class="newTopics_box">
+          <div class="Topics_scroll">
+            <ul>
+              <li><a href="#">新着情報があります！</a></li>
+              <li><a href="#">新着情報があります！</a></li>
+              <li><a href="#">新着情報があります！</a></li>
+              <li><a href="#">新着情報があります！</a></li>
+              <!-- <li><a href="#">新着情報があります！</a></li> -->
+            </ul>
+          </div>
         </div>
+        <div class="newTopics_ber"><p>新着情報</p></div>
+      </div>
     </main>
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/main.js"></script>
-</body>
-
+  </body>
 </html>
