@@ -19,6 +19,7 @@ li {
 }
 img {
   width: 100%;
+  height: 100%;
 }
 
 h1,
@@ -198,6 +199,7 @@ li {
 .myplofile,
 .my_picbox img {
   position: absolute;
+  object-fit: cover;
 }
 
 .myplofile {

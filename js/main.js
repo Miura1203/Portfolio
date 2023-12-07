@@ -5,14 +5,17 @@ $(function () {
     if (!isViewing) {
       // メニューが非表示の時(状態:false;条件:true;)
       $(".h_menu_li").each(function (count) {
-         // jqueryセレクタに変更し、addClassが使用できるように変数へ代入
+        // jqueryセレクタに変更し、addClassが使用できるように変数へ代入
         let target = $(this.children);
         setTimeout(function () {
           target.removeClass("removePoyon");
           target.addClass("addPoyon");
         }, count * 100);
       });
-      $('.menuImg').css({'background-position':'center','transition':'0.5s'})
+      $(".menuImg").css({
+        "background-position": "center",
+        transition: "0.5s",
+      });
       isViewing = true;
     } else {
       $(".h_menu_li").each(function (count) {
@@ -21,7 +24,7 @@ $(function () {
           target.addClass("removePoyon");
         }, count * 100);
       });
-      $('.menuImg').css({'background-position':''})
+      $(".menuImg").css({ "background-position": "" });
       isViewing = false;
     }
   });
@@ -29,14 +32,14 @@ $(function () {
 
 // menu画像設定
 $(".menuImg").hover(
-  function(){
-    $('.menuImg,.h_menu').css('transform','scale(1)')
+  function () {
+    $(".menuImg,.h_menu").css("transform", "scale(1)");
   },
-  function(){
-    $('.menuImg,.h_menu').css('transform','scale(0.9)')
-    $('.menuImg').css('transition','all 0.1s')
+  function () {
+    $(".menuImg,.h_menu").css("transform", "scale(0.9)");
+    $(".menuImg").css("transition", "all 0.1s");
   }
-)
+);
 
 // menubtnここまで
 
@@ -56,21 +59,33 @@ $(function () {
   });
 });
 
-$('.h_menu_li').hover(
-  function(){
-    let liIndex = $(this).index()
-    if (liIndex === 0){
-      $('.menuImg').css('background-image','url(../img/menu/無題482_20231204090416.png)')
-    }else if(liIndex === 1){
-      $('.menuImg').css('background-image','url(../img/menu/無題482_20231204090421.png)')
-    }else{
-      $('.menuImg').css('background-image','url(../img/menu/無題482_20231204143352.png)')
+$(".h_menu_li").hover(
+  function () {
+    let liIndex = $(this).index();
+    if (liIndex === 0) {
+      $(".menuImg").css(
+        "background-image",
+        "url(../img/menu/無題482_20231204090416.png)"
+      );
+    } else if (liIndex === 1) {
+      $(".menuImg").css(
+        "background-image",
+        "url(../img/menu/無題482_20231204090421.png)"
+      );
+    } else {
+      $(".menuImg").css(
+        "background-image",
+        "url(../img/menu/無題482_20231204143352.png)"
+      );
     }
   },
-  function(){
-    $('.menuImg').css('background-image','url(../img/menu/無題482_20231204090411.png)')
+  function () {
+    $(".menuImg").css(
+      "background-image",
+      "url(../img/menu/無題482_20231204090411.png)"
+    );
   }
-)
+);
 // ABOUTここまで
 
 // WORKS
@@ -106,32 +121,45 @@ $(function () {
   $(".content").on("click", function (event) {
     let contentIndex = $(this).index();
     let parent = $(event.target).parents("section").attr("id");
-    let modalIndex = $('.modalContent').eq(contentIndex).index();
+    let modalIndex = $(".modalContent").eq(contentIndex).index();
     // 初期化
-    $('.modalContent').removeClass('modalContent_View');
+    $(".modalContent").removeClass("modalContent_View");
     $(".modalBase,.modalBack,.closeBtn").removeClass("modalAnime_Close");
-    $(".closeBtn").css('display','flex');
-    $('html, body').css('overflow', 'hidden');
-    
-    if(contentIndex === modalIndex){
-    if (parent === "web_container") {
+    //
+    $(".closeBtn").css("display", "flex");
+    $("html, body").css("overflow", "hidden");
+
+    if (contentIndex === modalIndex) {
+      if (parent === "web_container") {
         $(".modalBase,.modalBack").addClass("modalAnime_Open");
-        $('.webModal').children().eq(contentIndex).addClass('modalContent_View');
-      }else if(parent === "illust_container"){
+        $(".webModal")
+          .children()
+          .eq(contentIndex)
+          .addClass("modalContent_View");
+      } else if (parent === "illust_container") {
         $(".modalBase,.modalBack").addClass("modalAnime_Open");
-        $('.illustModal').children().eq(contentIndex).addClass('modalContent_View');
-      
-    }else{
+        $(".illustModal")
+          .children()
+          .eq(contentIndex)
+          .addClass("modalContent_View");
+      } else {
         $(".modalBase,.modalBack").addClass("modalAnime_Open");
-        $('.fanficModal').children().eq(contentIndex).addClass('modalContent_View');
+        $(".fanficModal")
+          .children()
+          .eq(contentIndex)
+          .addClass("modalContent_View");
       }
-    }else{
+    } else {
       return false;
     }
   });
   $(".closeBtn,.modalBack").on("click", function () {
     $(".modalBase,.modalBack,.closeBtn").addClass("modalAnime_Close");
-    $('html, body').removeAttr('style');
+    setTimeout(function () {
+      $(".modalContent").removeClass("modalContent_View");
+      $(".modalBase,.modalBack,.closeBtn").removeClass("modalAnime_Open");
+    }, 400);
+    $("html, body").removeAttr("style");
   });
 });
 
