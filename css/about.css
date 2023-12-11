@@ -10,6 +10,7 @@
 }
 html {
   background-color: #f8ffee;
+  height: 600vh;
 }
 a {
   text-decoration: none;
@@ -61,7 +62,7 @@ li {
   justify-content: center;
   align-items: center;
 
-  /* display: none; */
+  display: none;
 }
 .desk {
   display: block;
@@ -100,318 +101,73 @@ li {
 }
 
 /* ------ABOUT------ */
+.backColor {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffb937;
+  z-index: -1;
+}
+.imgBox {
+  position: fixed;
+  left: 5%;
+  width: 90%;
+  height: 100vh;
+  margin: 0 auto;
+}
 
-.backcolor {
+.textBox {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+.textContent {
+  background-color: rgba(255, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  padding: 5% 10%;
+}
+.imgBox img {
+  object-fit: cover;
+}
+
+.slideAnime {
+  translate: 100%;
+  width: 100%;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #dea845;
+  left: 5%;
 }
-
-.about_box {
-  height: 600vh; /* scrollアニメーションでアニメーションの長さを調整するための指定 */
+.slideAnimation {
+  animation: slideIn 0.5s both;
 }
-
-/* 用紙の動きの指定 */
-
-.about_pic {
-  position: sticky; /* 固定の指定 */
-  top: 5%;
-  width: 60%;
-  min-width: 700px;
-  margin: auto;
-}
-.about_pic:nth-child(1) {
-  rotate: 4deg;
-  animation: picture1 ease;
-  animation-timeline: scroll();
-}
-.about_pic:nth-child(2) {
-  rotate: -2deg;
-  animation: picture2 ease;
-  animation-timeline: scroll();
-}
-.about_pic:nth-child(3) {
-  animation: picture3 ease;
-  animation-timeline: scroll();
-}
-@keyframes picture1 {
+@keyframes slideIn {
   0% {
-    scale: 0.9;
-    box-shadow: 7px 7px 10px -9px rgba(0, 0, 0, 0.6);
-  }
-  5% {
-    scale: 1;
+    translate: 100%;
   }
   100% {
-    box-shadow: 7px 7px 10px -9px rgba(0, 0, 0, 0.6);
+    translate: -5%;
   }
 }
-@keyframes picture2 {
+.removeAnimation {
+  animation: slideout 0.5s;
+}
+@keyframes slideout {
   0% {
-    transform: translateY(100%);
-    scale: 1.2;
-  }
-  20% {
-    transform: translateY(100%);
-    scale: 1.2;
-    box-shadow: -4px -32px 50px -5px rgba(0, 0, 0, 0.6);
-  }
-  50% {
-    transform: translateY(0);
-    scale: 1;
-    box-shadow: 7px 7px 10px -9px rgba(0, 0, 0, 0.6);
+    translate: -5%;
   }
   100% {
-    box-shadow: 7px 7px 10px -9px rgba(0, 0, 0, 0.6);
-  }
-}
-@keyframes picture3 {
-  0% {
-    transform: translateY(200%);
-    scale: 1.2;
-    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-  }
-  50% {
-    transform: translateY(200%);
-  }
-  60% {
-    transform: translateY(100%);
-    scale: 1.2;
-    box-shadow: -4px -32px 50px -5px rgba(0, 0, 0, 0.6);
-  }
-  90% {
-    transform: translateY(0);
-    scale: 1;
-    box-shadow: 7px 7px 10px -9px rgba(0, 0, 0, 0.6);
-  }
-  100% {
-    box-shadow: 7px 7px 10px -9px rgba(0, 0, 0, 0.6);
+    translate: 100%;
   }
 }
 
-/* 用紙の動きここまで */
-
-/* 用紙の内容 */
-
-.myplofile,
-.my_picbox img {
-  position: absolute;
-  object-fit: cover;
-}
-
-.myplofile {
-  width: 100%;
-  height: 100%;
-  /* z-index: 0; */
-  top: 0%;
-  padding: 32px;
-  display: flex;
-}
-.my_plobox01,
-.my_plobox02 {
-  width: 100%;
-  height: 100%;
-  margin: 0 20px;
-}
-/* .my_plobox02 {
-  margin-left: 20px;
-} */
-.my_picbox img {
-  left: 30%;
-  width: 20%;
-  height: 35%;
-  object-fit: cover;
-}
-.my_name {
-  /* color: #3d3d3d; */
-  font-size: 20px;
-  margin: 16px 0;
-}
-
-.my_birth {
-  margin: 12px 0;
-}
-
-.my_from {
-  margin: 12px 0;
-}
-.my_favo {
-  margin-top: 40px;
-  width: 100%;
-}
-.my_favo div {
-  padding: 10px 0;
-  background-color: #fff;
-  margin: 10px 0;
-  width: 100%;
-}
-.my_favo h3 {
-  font-weight: bold;
-}
-.my_schoolCareer,
-.my_career {
-  background-color: #fff;
-  margin-bottom: 1rem;
-}
-.my_plobox02 span {
-  margin-left: 1rem;
-}
-/* ------mySkill------ */
-.skillIcon img {
-  width: 80px;
-  height: 80px;
-}
-.skill {
-  display: flex;
-  align-items: center;
-  margin: 20px 0;
-}
-.skillText {
-  margin-left: 1rem;
-}
-.skill_h3 {
-  text-align: center;
-}
-
-/* レスポンシブ */
-@media screen and (max-width: 900px) {
-  /* .about_box {
-    overflow-x: hidden;
-  } */
-  .about_pic {
-    top: 18%;
-    width: 100%;
-    min-width: 480px;
-    scale: 1;
-    /* margin: 0 auto; */
-    /* translate: -19% 10%; */
-  }
-  .about_pic:nth-child(1) {
-    rotate: 94deg;
-    /* scale: 0.9; */
-  }
-  @keyframes picture1 {
-    0% {
-      box-shadow: 7px 7px 10px -9px rgba(0, 0, 0, 0.6);
-    }
-    100% {
-      box-shadow: 7px 7px 10px -9px rgba(0, 0, 0, 0.6);
-    }
-  }
-  .about_pic:nth-child(2) {
-    rotate: 88deg;
-    /* scale: 0.9; */
-    scale: 1;
-  }
-  @keyframes picture2 {
-    0% {
-      transform: translateX(100%);
-      scale: 1.2;
-    }
-    20% {
-      transform: translateX(100%);
-      scale: 1.2;
-      box-shadow: -4px -32px 50px -5px rgba(0, 0, 0, 0.6);
-    }
-    50% {
-      transform: translateX(0);
-      /* scale: 0.9; */
-      scale: 1;
-      box-shadow: 7px 7px 10px -9px rgba(0, 0, 0, 0.6);
-    }
-    100% {
-      box-shadow: 7px 7px 10px -9px rgba(0, 0, 0, 0.6);
-    }
-  }
-  .about_pic:nth-child(3) {
-    rotate: 90deg;
-    /* scale: 0.9; */
-    scale: 1;
-  }
-  @keyframes picture3 {
-    0% {
-      transform: translateX(200%);
-      scale: 1.2;
-      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-    }
-    50% {
-      transform: translateX(200%);
-    }
-    60% {
-      transform: translateX(100%);
-      scale: 1.2;
-      box-shadow: -4px -32px 50px -5px rgba(0, 0, 0, 0.6);
-    }
-    90% {
-      transform: translateX(0);
-      /* scale: 0.9; */
-      scale: 1;
-      box-shadow: 7px 7px 10px -9px rgba(0, 0, 0, 0.6);
-    }
-    100% {
-      box-shadow: 7px 7px 10px -9px rgba(0, 0, 0, 0.6);
-    }
-  }
-  h3 {
-    font-size: 16px;
-  }
-  p {
-    font-size: 15px;
-  }
-  .myplofile {
-    display: block;
-    rotate: -90deg;
-    left: 0;
-    width: 70%;
-    padding: 16px;
-  }
-  .my_picbox img {
-    left: unset;
-    right: 32px;
-    width: 30%;
-  }
-  .my_plobox01,
-  .my_plobox02 {
-    margin: 0;
-    height: fit-content;
-  }
-  .my_favo div {
-    padding: 0;
-  }
-  .my_name {
-    font-size: 16px;
-    margin-top: 20px;
-  }
-  .my_birth,
-  .my_from {
-    margin: 0;
-  }
-  .my_favo {
-    margin-top: 0;
-  }
-  .skill {
-    margin: 10px 0;
-  }
-  .skillIcon img {
-    width: 70px;
-    height: 70px;
-  }
-}
 @media screen and (max-width: 600px) {
-  .my_name {
-    margin: 0;
-    margin-bottom: 8px;
+  .imgBox {
+    width: 100%;
+    left: 0;
   }
-  .about_pic {
-    translate: -10% 0%;
-    width: 145%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .about_pic {
-    min-width: 375px;
+  html {
+    height: 700vh;
   }
 }

@@ -130,10 +130,11 @@ section {
   top: 50%;
   left: 50%;
   width: 80%;
-  height: 80%;
+  height: 100vh;
   background-color: #fff;
   transition: 0.3s;
   display: none;
+  overflow-y: scroll;
 }
 .modalAnime_Open {
   animation: modalAnimeOpen 0.5s both;
@@ -149,39 +150,40 @@ section {
 }
 .siteContent,
 .siteViewing {
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  padding: 16px;
+  padding: 16px 32px;
 }
 .siteViewing {
-  background-color: antiquewhite;
-  overflow-y: scroll;
+  background-color: #f8ffee;
+  overflow-y: hidden;
+  height: 70vh;
 }
 .siteViewing img {
   height: fit-content;
+  object-fit: cover;
+  object-position: top;
 }
 .siteContent {
-  left: 50%;
+  /* left: 50%; */
   background-color: #f8ffee;
-  overflow-y: scroll;
 }
 .closeBtn {
   position: fixed;
   rotate: 45deg;
   z-index: 99999;
-  scale: 2;
-  transform: translate(0%, -40%);
-  top: 10%;
-  right: 10%;
+  scale: 4;
+  top: 5%;
+  right: 5%;
   width: 20px;
   height: 20px;
-  background-color: #fff;
   border-radius: 50%;
-  display: none; /* 縦横中央 */
+  /* 縦横中央 */
+  display: none;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+.closeBtn p {
+  color: #fff;
 }
 .modalAnime_Close {
   animation: modalAnimeClose 0.5s both;
@@ -224,19 +226,24 @@ section {
 .siteContent h3 {
   font-size: 24px;
   border-left: 10px double #ff7860;
-  margin: 8px;
+  margin: 16px;
   padding-left: 8px;
 }
 .contentList li {
-  list-style-type: circle;
-  list-style-position: inside;
+  list-style-type: none;
+  font-size: 20px;
   font-weight: bold;
-  margin: 10px 0;
+  margin: 5px 0;
+  padding: 20px 10px;
+  border-top: 1px solid #464646;
+  /* border-bottom: 1px solid #464646; */
 }
 .contentList p {
+  font-size: 16px;
+  font-weight: lighter;
   padding: 10px;
-  background-color: #fff;
-  border: 1px solid #bad227;
+  /* background-color: #fff;
+  border: 1px solid #bad227; */
   margin: 0 auto;
 }
 .codeUseLang_Box {
@@ -259,6 +266,10 @@ section {
 
 /* ------レスポンシブ------ */
 @media screen and (max-width: 600px) {
+  .siteContent,
+  .siteViewing {
+    padding: 16px;
+  }
   .scroll_where {
     transform: rotate(0);
     top: 20px;
