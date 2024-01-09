@@ -114,32 +114,32 @@ $(window).on("scroll", function () {
 
 // WORKS
 
-// $(window).on("scroll", function () {
-//   let scroll = $(window).scrollTop(); // スクロール量
-//   let webh = $("#web_container").offset().top; // webコンテンツのトップの高さ
-//   let illusth = $("#illust_container").offset().top; // illustコンテンツのトップの高さ
-//   let fanh = $("#fanfic_container").offset().top; // fanficコンテンツのトップの高さ
+$(window).on("scroll", function () {
+  let scroll = $(window).scrollTop(); // スクロール量
+  let webh = $("#web_container").offset().top; // webコンテンツのトップの高さ
+  let illusth = $("#illust_container").offset().top; // illustコンテンツのトップの高さ
+  let fanh = $("#fanfic_container").offset().top; // fanficコンテンツのトップの高さ
 
-//   if (scroll >= fanh - 100) {
-//     // スクロールの位置がfanh以下だったら
-//     $(".scroll_where a").css("color", "#464646");
-//     $(".fanfic_p").css("color", "red"); // fanhのみ赤
-//   } else if (scroll >= illusth - 100) {
-//     // スクロールの位置がillust以下だったら
-//     $(".scroll_where a").css("color", "#464646");
-//     $(".illust_p").css("color", "red"); // illustのみ赤
-//   } else if (scroll >= webh - 100) {
-//     // スクロールの位置がweb以下だったら
-//     $(".scroll_where a").css("color", "#464646");
-//     $(".web_p").css("color", "red"); // webのみ赤
-//     $(".phoneSise").removeClass("scrollFadeOut"); // レスポンシブ：フェードアウト消去
-//     $(".phoneSise").addClass("scrollFadeIn"); // レスポンシブ：フェードイン
-//   } else {
-//     // 上記条件以外すべて元の色に戻す
-//     $(".scroll_where a").css("color", "#464646");
-//     $(".phoneSise").addClass("scrollFadeOut"); // レスポンシブ：フェードアウト
-//   }
-// });
+  if (scroll >= fanh - 100) {
+    // スクロールの位置がfanh以下だったら
+    $(".scroll_where a").css("color", "#464646");
+    $(".fanfic_p").css("color", "red"); // fanhのみ赤
+  } else if (scroll >= illusth - 100) {
+    // スクロールの位置がillust以下だったら
+    $(".scroll_where a").css("color", "#464646");
+    $(".illust_p").css("color", "red"); // illustのみ赤
+  } else if (scroll >= webh - 100) {
+    // スクロールの位置がweb以下だったら
+    $(".scroll_where a").css("color", "#464646");
+    $(".web_p").css("color", "red"); // webのみ赤
+    $(".phoneSise").removeClass("scrollFadeOut"); // レスポンシブ：フェードアウト消去
+    $(".phoneSise").addClass("scrollFadeIn"); // レスポンシブ：フェードイン
+  } else {
+    // 上記条件以外すべて元の色に戻す
+    $(".scroll_where a").css("color", "#464646");
+    $(".phoneSise").addClass("scrollFadeOut"); // レスポンシブ：フェードアウト
+  }
+});
 
 $(function () {
   $(".content").on("click", function (event) {
