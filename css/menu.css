@@ -108,6 +108,38 @@
   background-color: #fff;
   border: 3px solid #bad227;
   border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+@keyframes surcleMap {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    rotate: -180deg;
+  }
+  100% {
+    rotate: -360deg;
+  }
+}
+.areaMap {
+  position: absolute;
+  top: -150%;
+  left: -20px;
+  width: 370%;
+  object-fit: cover;
+  animation: surcleMap 12s infinite linear;
+}
+.mapPin {
+  display: block;
+  clip-path: polygon(0% 80%, 50% 0%, 100% 80%);
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ff7860;
+  width: 20px;
+  height: 26px;
 }
 
 .h_minimap_p {

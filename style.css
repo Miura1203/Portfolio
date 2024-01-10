@@ -25,6 +25,22 @@ p,
 a {
   color: #464646;
 }
+/* スクロールバー */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background-color: #fff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #bad227;
+  border-radius: 5px;
+  border-right: 3px solid transparent;
+  border-left: 3px solid transparent;
+  background-clip: padding-box;
+}
 /* title */
 
 /* ------header------ */
@@ -41,6 +57,7 @@ a {
   justify-content: space-between;
 }
 .link_btn a {
+  position: relative;
   text-align: center;
   font-size: 24px;
   display: block;
@@ -48,9 +65,23 @@ a {
   border-radius: 30px;
   color: #fff;
   width: 240px;
-  margin: 0 10px;
+  margin: 0 24px;
   padding: 20px;
   transition: all 0.1s;
+}
+.link_btn a::after {
+  content: "";
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 80%;
+  border-radius: 24px;
+}
+.link_btn a:hover::after {
+  border: 3px solid #fff;
+  animation: linkAnime 1s linear infinite;
 }
 .link_btn a:hover {
   background-color: red;
@@ -58,35 +89,37 @@ a {
 }
 /* 新着情報 */
 .newTopics {
-  display: flex;
   position: fixed;
-  top: 50%;
-  left: 10px;
-  transform: translate(0, -50%);
+  top: 18%;
+  display: flex;
+  margin: 16px;
+  width: fit-content;
 }
 .newTopics_box {
   background-color: #fff;
-  padding: 30px 0;
-}
-.Topics_scroll {
-  height: 240px;
-  overflow-y: scroll;
+  height: 350px;
+  width: 300px;
+  padding: 24px 20px;
+  border-radius: 10px 0 10px 10px;
+  overflow-y: auto;
 }
 .newTopics_box li {
-  background-color: #cdea79;
-  width: 240px;
-  height: fit-content;
-  margin: 0 10px;
-  margin-bottom: 20px;
-  padding: 10px;
-  border-radius: 20px;
+  border-bottom: 1px solid #464646;
+  width: 100%;
 }
 .newTopics_box a {
   display: block;
-  text-align: center;
+  padding: 16px 0;
+}
+.newTopics_box a:hover {
+  background-color: rgb(226, 234, 204);
 }
 .newTopics_ber {
-  display: none;
+  background-color: #fff;
+  height: fit-content;
+  padding: 16px 8px;
+  writing-mode: vertical-rl;
+  border-radius: 0 10px 10px 0;
 }
 
 /* メールコンテンツ */
@@ -118,7 +151,6 @@ a {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
-  /* height: 100%; */
   object-fit: cover;
   min-width: 400px;
 }
@@ -136,19 +168,9 @@ a {
 /* レスポンシブ */
 @media screen and (max-width: 950px) {
   /* 新着情報 */
-  .newTopics_ber {
-    width: 100px;
-    height: 40px;
-    background-color: #cdea79;
-    display: block;
-  }
-  .newTopics_ber p {
-    text-align: center;
-    padding: 9px 0;
-  }
   .newTopics {
     transition: all 0.3s;
-    transform: translateX(-76%);
+    transform: translateX(-93%);
     top: 30%;
   }
   .touch {
