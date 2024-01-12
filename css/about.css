@@ -11,6 +11,7 @@
 html {
   background-color: #f8ffee;
   height: 600vh;
+  font-family: "Zen Maru Gothic", serif;
 }
 a {
   text-decoration: none;
@@ -31,6 +32,17 @@ p,
 a,
 li {
   color: #464646;
+}
+/* スクロールバー */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #bad227;
+  border-radius: 5px;
 }
 /* タイトル */
 .title {

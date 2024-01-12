@@ -11,6 +11,7 @@
 html {
   background-color: #f8ffee;
   scroll-behavior: smooth;
+  font-family: "Zen Maru Gothic", serif;
 }
 a {
   text-decoration: none;
@@ -39,7 +40,17 @@ section {
 .fanfic_p:any-link {
   color: #464646;
 }
-
+/* スクロールバー */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #bad227;
+  border-radius: 5px;
+}
 /* タイトル */
 .title {
   font-size: 2rem;
@@ -60,9 +71,8 @@ section {
 .content {
   background-color: #bad227;
   width: 350px;
-  height: 350px;
+  height: 200px;
   min-width: 350px;
-  border-radius: 30px;
   margin: 16px;
   display: flex;
 }
@@ -81,8 +91,8 @@ section {
 .contentBox {
   background-color: #fff;
   border-radius: 20px;
-  width: 90%;
-  height: 90%;
+  width: 98%;
+  height: 97%;
   margin: auto;
   overflow: hidden;
   cursor: pointer;
@@ -95,7 +105,7 @@ section {
 .scroll_where {
   position: fixed;
   top: 50vh;
-  left: -80px;
+  left: -120px;
   width: fit-content;
   transform: rotate(-90deg);
 }
@@ -160,8 +170,9 @@ section {
 }
 .siteViewing img {
   height: fit-content;
-  object-fit: cover;
+  object-fit: contain;
   object-position: top;
+  height: 100%;
 }
 .siteContent {
   /* left: 50%; */
@@ -238,6 +249,10 @@ section {
   padding: 20px 10px;
   border-top: 1px solid #464646;
   /* border-bottom: 1px solid #464646; */
+}
+.contentList li a {
+  color: royalblue;
+  overflow-wrap: break-word;
 }
 .contentList p {
   font-size: 16px;

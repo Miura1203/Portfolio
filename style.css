@@ -10,6 +10,7 @@
 }
 html {
   background-color: #f8ffee;
+  font-family: "Zen Maru Gothic", serif;
 }
 a {
   text-decoration: none;
@@ -31,8 +32,8 @@ a {
 }
 ::-webkit-scrollbar-track {
   background-color: #fff;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 ::-webkit-scrollbar-thumb {
   background-color: #bad227;
@@ -101,6 +102,7 @@ a {
   width: 300px;
   padding: 24px 20px;
   border-radius: 10px 0 10px 10px;
+  border: 2px solid #bad227;
   overflow-y: auto;
 }
 .newTopics_box li {
@@ -115,11 +117,14 @@ a {
   background-color: rgb(226, 234, 204);
 }
 .newTopics_ber {
+  position: absolute;
+  left: calc(100% - 2px);
   background-color: #fff;
   height: fit-content;
   padding: 16px 8px;
   writing-mode: vertical-rl;
   border-radius: 0 10px 10px 0;
+  border: 2px solid #bad227;
 }
 
 /* メールコンテンツ */
@@ -170,7 +175,7 @@ a {
   /* 新着情報 */
   .newTopics {
     transition: all 0.3s;
-    transform: translateX(-93%);
+    transform: translateX(-106%);
     top: 30%;
   }
   .touch {
@@ -203,5 +208,10 @@ a {
     transform: translate(0, 0);
     width: 35vw;
     min-width: 200px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .link_btn a {
+    margin: 0 8px;
   }
 }

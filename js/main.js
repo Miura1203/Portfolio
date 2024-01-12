@@ -118,17 +118,17 @@ $(window).on("scroll", function () {
 $(window).on("scroll", function () {
   let scroll = $(window).scrollTop(); // スクロール量
   let webh = $("#web_container").offset().top; // webコンテンツのトップの高さ
+  let apph = $("#fanfic_container").offset().top; // fanficコンテンツのトップの高さ
   let illusth = $("#illust_container").offset().top; // illustコンテンツのトップの高さ
-  let fanh = $("#fanfic_container").offset().top; // fanficコンテンツのトップの高さ
 
-  if (scroll >= fanh - 100) {
+  if (scroll >= illusth - 100) {
     // スクロールの位置がfanh以下だったら
     $(".scroll_where a").css("color", "#464646");
-    $(".fanfic_p").css("color", "red"); // fanhのみ赤
-  } else if (scroll >= illusth - 100) {
+    $(".illust_p").css("color", "red"); // fanhのみ赤
+  } else if (scroll >= apph - 100) {
     // スクロールの位置がillust以下だったら
     $(".scroll_where a").css("color", "#464646");
-    $(".illust_p").css("color", "red"); // illustのみ赤
+    $(".fanfic_p").css("color", "red"); // illustのみ赤
   } else if (scroll >= webh - 100) {
     // スクロールの位置がweb以下だったら
     $(".scroll_where a").css("color", "#464646");
@@ -147,6 +147,8 @@ $(function () {
     let contentIndex = $(this).index();
     let parent = $(event.target).parents("section").attr("id");
     let modalIndex = $(".modalContent").eq(contentIndex).index();
+    console.log(contentIndex);
+    console.log(modalIndex);
     // 初期化
     $(".modalContent").removeClass("modalContent_View");
     $(".modalBase,.modalBack,.closeBtn").removeClass("modalAnime_Close");
@@ -167,9 +169,9 @@ $(function () {
           .children()
           .eq(contentIndex)
           .addClass("modalContent_View");
-      } else {
+      } else if (parent === "fanfic_container") {
         $(".modalBase,.modalBack").addClass("modalAnime_Open");
-        $(".fanficModal")
+        $(".appModal")
           .children()
           .eq(contentIndex)
           .addClass("modalContent_View");
