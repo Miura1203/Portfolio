@@ -149,6 +149,8 @@ $(function () {
     let modalIndex = $(".modalContent").eq(contentIndex).index();
     console.log(contentIndex);
     console.log(modalIndex);
+    console.log(parent);
+
     // 初期化
     $(".modalContent").removeClass("modalContent_View");
     $(".modalBase,.modalBack,.closeBtn").removeClass("modalAnime_Close");
