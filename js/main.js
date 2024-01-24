@@ -141,6 +141,7 @@ $(window).on("scroll", function () {
     $(".phoneSise").addClass("scrollFadeOut"); // レスポンシブ：フェードアウト
   }
 });
+// console.log($(".illustModal").children.length);
 
 $(function () {
   $(".content").on("click", function (event) {
@@ -149,7 +150,6 @@ $(function () {
     let modalIndex = $(".modalContent").eq(contentIndex).index();
     console.log(contentIndex);
     console.log(modalIndex);
-    console.log(parent);
 
     // 初期化
     $(".modalContent").removeClass("modalContent_View");
@@ -178,8 +178,6 @@ $(function () {
           .eq(contentIndex)
           .addClass("modalContent_View");
       }
-    } else {
-      return false;
     }
   });
   $(".closeBtn,.modalBack").on("click", function () {
