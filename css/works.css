@@ -166,14 +166,13 @@ section {
 .siteViewing {
   background-color: #f8ffee;
   overflow-y: hidden;
-  /* height: 70vh; */
   max-height: 75vh;
 }
 .siteViewing img {
-  height: fit-content;
+  /* height: fit-content; */
   object-fit: contain;
   object-position: top;
-  height: 100%;
+  height: 75vh;
 }
 .siteContent {
   /* left: 50%; */
