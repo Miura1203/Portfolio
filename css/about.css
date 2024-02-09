@@ -172,6 +172,24 @@ li {
     translate: 100%;
   }
 }
+.loading {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  background-color: #594d43;
+  transform: translateY(-100%);
+  /* animation: loadingAnime 1.5s; */
+}
+
+@keyframes loadingAnime {
+  0% {
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
 /* ------コンテンツ------ */
 /* 自分のこと */
 .ploBox {
